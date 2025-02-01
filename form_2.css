@@ -1,0 +1,94 @@
+body
+{
+    background-color: rgba(0, 0, 0, 0.558);
+    
+}
+
+
+
+
+
+.div1
+{   
+    height: 350px;
+    width: 250px;
+    border:  solid white;
+    padding:20px;
+    padding-bottom: 40px;
+    margin:10% auto;
+    background-color: white;
+    border-radius: 2%;
+    font-family:Arial, Helvetica, sans-serif;
+    box-shadow: 0px 5px 10px rgb(0,0,0,0.25);
+    box-shadow: 0px 5px 10px  black;
+
+
+    
+    
+    }
+
+
+h1
+{
+    text-align: center;
+}
+
+
+.div2
+{   
+    display:flex;
+    flex-wrap: wrap;
+    align-content:center;
+    justify-content:space-evenly;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    gap: 15px;
+
+
+     
+
+
+}
+
+input[type="button"]
+{   
+    height:25px;
+    width:50px;
+    align-items: center;
+    cursor: pointer;
+    background-color: blue;
+    border-color: blue;
+    color:white;
+    border-radius: 2px;
+
+    
+
+    
+      
+
+}
+
+input[type="text"]
+{
+    width: 97%;
+    height:20px;
+    border-radius: 1px grey;
+    
+    
+    
+}
+
+input[type="reset"]
+{
+    height:25px;
+    width:1000px;
+    cursor: pointer;
+    border:0px solid black;
+    border-radius: 2px;   
+    background-color: blue;
+    color:white;    
+
+
+}
+
+
