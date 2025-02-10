@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1deb28e6db.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav>
+        <p id="pf"> Portfolio </p>
+        <div id="sidemenu">
+            <p class="links" onclick="scrollToPercentage(0)">Home</p>
+            <p class=" links" onclick="scrollToPercentage(85)">About Me</p>
+            <p class="links" onclick="scrollToPercentage(175)">Projects</p>
+            <p class="links" onclick="scrollToPercentage(300)">Contact</p>
+            <i class="fa-solid fa-xmark" id="fas" onclick="closemenu()"></i>
+        </div>
+        <span class="bar"><i class="fa-solid fa-bars" id="fas" onclick="openmenu()"></i></span>
+    </nav>
+    <div class="header">
+        <div class="container">
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Vishnu Mohan</span><br>from India</h1>
+            </div>
+        </div>
+    </div>
+
+    <!------------About------------>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about1">
+                    <img src="11.jpg">
+                </div>
+                <div class="about2">
+                    <h1 class="sub-title" style="color: #ff004f;"> About Me</h1> <br>
+                    <p>"I am a recently graduated eager to apply my skills and knowledge in a professional setting. Also
+                        i'm self-motivated, capable of multitasking effectively, and have strong listening skills, which
+                        allow me to understand and respond to needs efficiently. I am excited to contribute, learn, and
+                        grow in a dynamic work environment."</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programmimg Languages</span><br>Python</li>
+                            <li><span>Web Development</span><br>Html<br>Css<br>Java Script</li>
+                            <li><span>Database</span><br>MySql</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>B.Tech</span><br> Panimalar Engineering College<span class="s">2020-2024</span>
+                            </li>
+                            <li><span>Intermediate</span><br>Narayana Junior College<span class="s1">2018-2020</span>
+                            </li>
+                            <li><span>Ssc</span><br>Sri Geethanjali E.M Shcool<span class="s2">2017-2018</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--- Projects---->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title" style="color: #ff004f;">Projects</h1>
+            <div class="projects-list">
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Web App Development</h2>
+                    <p> </p>
+                    <a href="1.html"> Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <h2>Go Travel</h2>
+                    <p> </p>
+                    <a href="travel.html"> Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-calculator"></i>
+                    <h2>Calculator</h2>
+                    <p> </p>
+                    <a href="Form_2.HTML"> Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------- Contact -------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title" style="color: #ff004f;"> Contact </h1>
+                    <p><a href="mailto:mohanvishnu937@gmail.com"><i
+                                class="fa-solid fa-envelope"></i>mohanvishnu937@gmail.com</a></p>
+                    <p><i class="fa-solid fa-phone"></i> +91 63004447686 </p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/p/15cU6dMCyM/"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://x.com/VISHNU_310503?t=rBpVDvTpkMOnsNCkbg73Ew&s=08 "><i class="fa-brands fa-square-twitter"></i></a>
+                        <a href="https://www.instagram.com/vishnu2191981422/?__pwa=1"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://linkedin.com/in/vishnu-mohan-0763b5257"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="Resume.pdf" target="" class="btn btn2"> View CV/Resume </a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name">
+                        <input type="email" name="Email" placeholder="Your Email">
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="copyright">
+            <p> &copy;Copyright Made by Vishnu Mohan. All Rights are Reserved </p>
+        </div>
+    </div>
+
+
+
+    <!----------Java Script---------->
+
+    <script>
+        function scrollToPercentage(percentage) {
+    var scrollPosition = window.innerHeight * (percentage / 100);
+    window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+}
+    </script>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+
+
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemeu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+        }
+    </script>
+
+
+
+    <script>
+        const scriptURL = '<https://script.google.com/macros/s/AKfycbwQL-5-Yu2Y3A2nvXYuQIKCKE00VCNY-3T-GN_V9CU4PXUVlFtf3XSkZdyE8EjqWY_W/exec>'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message Sent Successfully"
+                    sentTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>

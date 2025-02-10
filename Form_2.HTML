@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel= "stylesheet" href = "form_2.css">
+
+</head>
+<body>
+     <form>
+    <div class="div1">
+
+    <h1> Simple Form </h1>
+        
+
+        Enter a Number : <br>
+        <input type="text" id="x"> <br><br>
+        Enter a Number : <br>
+        <input type="text" id="y"> <br><br>
+        Result: <br> 
+        <input type="text" id="Result" disabled><br> <br> <br>
+
+    <div class="div2">
+
+        <input id="+" type = "button" value = "ADD" onclick = "add()"> 
+        <input id="-" type = "button" value = "SUB" onclick = "sub()"> 
+        <input id="*" type = "button" value = "MUL" onclick = "mul()"> 
+        <input id="/" type = "button" value = "DIV" onclick = "div()"> 
+        
+        <input  type ="reset" value= "CLEAR" >
+
+    </div>
+    </div>
+
+    <script>
+
+        function add()
+        {
+            var a,b,ADD
+            a=parseInt(document.getElementById("x").value)
+            b=parseInt(document.getElementById("y").value)
+            
+            ADD=a+b;
+            document.getElementById("Result").value=ADD;
+            document.getElementById("x1").textContent="RESULT:="  + ADD;
+
+            
+        }
+
+        function sub()
+        {
+            var a,b,SUB
+            a=parseInt(document.getElementById("x").value)
+            b=parseInt(document.getElementById("y").value)
+            
+            SUB=a-b;
+            document.getElementById("Result").value=SUB;
+            document.getElementById("-").textContent="RESULT:="  - SUB;
+                       
+        }
+
+        function mul()
+        {
+            var a,b,MUL
+            a=parseInt(document.getElementById("x").value)
+            b=parseInt(document.getElementById("y").value)
+            
+            MUL=a*b;
+            document.getElementById("Result").value=MUL;
+            document.getElementById("-").textContent="RESULT:="  * MUL;
+                       
+        }
+
+        function div()
+        {
+            var a,b,DIV
+            a=parseInt(document.getElementById("x").value)
+            b=parseInt(document.getElementById("y").value)
+            
+            DIV=a/b;
+            document.getElementById("Result").value=DIV;
+            document.getElementById("-").textContent="RESULT:="  / DIV;
+            
+        }
+
+    </script>
+</form>
+
+</body>
+</html>
