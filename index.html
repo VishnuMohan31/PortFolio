@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +12,11 @@
     <nav>
         <p id="pf"> Portfolio </p>
         <div id="sidemenu">
-            <p class="links" onclick="scrollToPercentage(0)">Home</p>
-            <p class=" links" onclick="scrollToPercentage(85)">About Me</p>
-            <p class="links" onclick="scrollToPercentage(175)">Projects</p>
-            <p class="links" onclick="scrollToPercentage(300)">Contact</p>
             <i class="fa-solid fa-xmark" id="fas" onclick="closemenu()"></i>
+            <p class="links" onclick="scrollToPercentage(0)">Home</p>
+            <p class=" links" onclick="aboutScroll(85)">About Me</p>
+            <p class="links" onclick="projectsScroll(175)">Projects</p>
+            <p class="links" onclick="ContactScroll(300)">Contact</p>
         </div>
         <span class="bar"><i class="fa-solid fa-bars" id="fas" onclick="openmenu()"></i></span>
     </nav>
@@ -139,9 +138,30 @@
 
     <script>
         function scrollToPercentage(percentage) {
-    var scrollPosition = window.innerHeight * (percentage / 100);
-    window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
-}
+        var scrollPosition = window.innerHeight * (percentage / 100);
+        window.scrollTo({ top: scrollPosition, behavior: 'smooth' });}
+    
+        function aboutScroll(){
+            if (window.innerWidth > 783 ){
+                scrollToPercentage(85);
+            } else {    
+                scrollToPercentage(95);
+            }
+        }
+        function projectsScroll(){
+            if (window.innerWidth > 783 ){
+                scrollToPercentage(175);
+            } else {    
+                scrollToPercentage(260);
+            }
+        }
+        function ContactScroll(){
+            if (window.innerWidth > 783 ){
+                scrollToPercentage(300);
+            } else {    
+                scrollToPercentage(445);
+            }
+        }
     </script>
 
     <script>
@@ -171,7 +191,7 @@
         }
 
         function closemenu() {
-            sidemeu.style.right = "-200px";
+            sidemeu.style.right = "-50%";
         }
     </script>
 
